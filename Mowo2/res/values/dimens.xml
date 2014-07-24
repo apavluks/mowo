@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="preference_item_padding_side">8.0dip</dimen>
+    
+    <dimen name="empty_container_text_size">28.0sp</dimen>
+    <dimen name="empty_container_hint_text_size">18.0sp</dimen>
+    
+    <!-- swipe list view -->
+    
+        <!-- Default -->
+    <dimen name="radius_default">3dp</dimen>
+    <dimen name="swip_list_padding_default">0dp</dimen>
+    <dimen name="margin_default">5dp</dimen>
+    <dimen name="line_default">1dp</dimen>
+
+    <!-- swipe list view entry -->
+    <dimen name="swip_list_entries_height">90dp</dimen>
+    <dimen name="size_list_image">64dp</dimen>
+    <dimen name="font_size_title">17sp</dimen>
+    <dimen name="font_size_description">17sp</dimen>
+    <dimen name="swipe_list_entry_time_text_size">20sp</dimen>
+
+    <dimen name="margin_setting">20dp</dimen>
+
+    <dimen name="font_size_new_tag">11sp</dimen>
+    <dimen name="padding_new_tag">3dp</dimen>
+    
+    <dimen name="gap_layout_marginRight">0dp</dimen>
+    <dimen name="padding_gap">4dp</dimen>
+ 
+    <dimen name="activity_type_spinner_hight">48dp</dimen>
+    <dimen name="activity_job_number">20dp</dimen>
+    
+    <!-- timecard list child start -->
+    <dimen name="timecard_list_child_default_padding">16dp</dimen>
+    <dimen name="timecard_list_child_default_paddingLeft">37dp</dimen>
+    
+    
+    <dimen name="swipe_row_activity_type">18dp</dimen>
+
+    <!-- timecard list child end -->
+
+    
+    <!-- form items -->
+    <dimen name="formitem_default_element_height">18dp</dimen>
+    <dimen name="space_between_entry_fields">18dp</dimen>
+    
+    <dimen name="entry_header">450dp</dimen>
+    <dimen name="header_logo_size">100dp</dimen>
+</resources>

@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mowoapp="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/new_timesheet"
+        android:icon="@drawable/ic_action_add_timer"
+        android:title="@string/clock"
+        mowoapp:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/action_new"
+        android:icon="@drawable/ic_action_plus"
+        android:title="@string/menu_add_btn"
+        mowoapp:showAsAction="always"/>
+    
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/ic_action_delete_48"
+        android:title="@string/button_delete"
+        mowoapp:showAsAction="always"/>    
+    
+    <item
+        android:id="@+id/action_settings"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/prefs"
+        android:icon="@drawable/ic_action_options"
+        android:title="Options"/>
+
+</menu>

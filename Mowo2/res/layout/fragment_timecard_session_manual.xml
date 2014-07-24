@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.cummins.mowo"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_timecard_container"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dip"
+    android:orientation="vertical"
+    android:weightSum="150" >
+    
+        
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="25dp"
+            android:text="@string/timecard_status_bar_title_notstarted"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/session_indicator"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignLeft="@id/title"
+            android:layout_toStartOf="@id/title"
+            android:background="@drawable/session_indicator"
+            android:visibility="invisible"/>
+
+        <RelativeLayout
+            android:id="@+id/title_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@id/title" >
+
+            <Button
+                android:id="@+id/session_control_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/clockbutton_selector_holo_light"
+                android:paddingRight="4dip"
+                android:text="@string/timecard_session_control_button"
+                android:textColor="#33B5E5"
+                android:textSize="18sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/clockbuttonslayout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:background="#ffe0e0e0" >
+
+        <View
+            android:id="@+id/VerticalLine"
+            android:layout_width="1.0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="4.0dip"
+            android:layout_marginTop="4.0dip"
+            android:background="?android:dividerVertical" />
+
+        <com.cummins.mowo.widgets.ClockButtonWidget
+            android:id="@+id/clock_in_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/VerticalLine"
+            android:background="@drawable/clockbutton_selector_holo_light"
+            custom:valueText="Clock In"
+            custom:valueTextSize="28sp" />
+
+        <com.cummins.mowo.widgets.ClockButtonWidget
+            android:id="@+id/clock_out_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/VerticalLine"
+            android:background="@drawable/clockbutton_selector_holo_light"
+            custom:valueText="Clock Out"
+            custom:valueTextSize="28sp" />
+    </RelativeLayout>
+    -->
+
+    <LinearLayout
+        android:id="@+id/clockbuttonslayout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:orientation="horizontal"
+        android:weightSum="9" >
+
+        <com.cummins.mowo.widgets.ClockButtonWidget
+            android:id="@+id/clock_in_widget"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:background="@drawable/clockbutton_selector_holo_light"
+            custom:valueText="Clock In"
+            custom:valueTextSize="26sp" />
+
+        <TextView
+            android:id="@+id/session_duration"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="4.0dip"
+            android:layout_marginTop="4.0dip"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="00h 00m"
+            android:textSize="30sp" />
+
+        <com.cummins.mowo.widgets.ClockButtonWidget
+            android:id="@+id/clock_out_widget"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="3"
+            android:background="@drawable/clockbutton_selector_holo_light"
+            custom:valueText="Clock Out"
+            custom:valueTextSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/entries_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_weight="130"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/activitysectionheader"
+            style="@style/SectionHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!--
+                <Switch
+                android:id="@+id/manualTimeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:checked="true"
+                android:switchMinWidth="50sp"
+                android:switchPadding="30sp"
+                android:text="@string/activity_manual_switch_text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/activity_manual_switch_text"
+                android:textSize="20sp" />
+            -->
+
+            <TextView
+                android:id="@+id/header"
+                style="@style/ActivityListHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/activitiesheader" />
+
+            <ImageButton
+                android:id="@+id/AddActivityButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toRightOf="@id/header"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:contentDescription="@drawable/new_activity_button"
+                android:padding="1dp"
+                android:scaleType="fitEnd"
+                android:src="@drawable/new_activity_button" />
+        </RelativeLayout>
+
+        <include layout="@layout/container_empty" />
+
+        <!--
+             <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.cummins.mowo.widgets.swipelistview.SwipeListView
+                android:id="@+id/entries_swipe_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="#00000000"
+                swipe:swipeBackView="@+id/back"
+                swipe:swipeCloseAllItemsWhenMoveList="true"
+                swipe:swipeDrawableChecked="@drawable/choice_selected"
+                swipe:swipeDrawableUnchecked="@drawable/choice_unselected"
+                swipe:swipeFrontView="@+id/front"
+                swipe:swipeMode="right"
+                swipe:swipeOffsetRight="300dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/timecard_id_fragment_timecard"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:text="New Timecard"
+        android:textSize="18sp" />
+
+    <!--
+        <fragment android:name="com.cummins.mowo.activity.TimecardClockingFragment"
+              android:id="@+id/timecardclockingfragment"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"/>   
+
+    <fragment android:name="com.cummins.mowo.activity.TimecardActivitiesFragment"
+              android:id="@+id/timecardactivityfragment"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"/>
+    -->
+
+</LinearLayout>

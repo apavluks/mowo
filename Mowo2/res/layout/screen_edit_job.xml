@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res/com.cummins.mowo"
+    android:id="@+id/fragment_timecard_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dip"
+    android:orientation="vertical"
+    android:weightSum="150"
+    tools:context=".MainActivity" >
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/session_clocking_sectionheader"
+        style="@style/SectionHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/session_clocking_header_text"
+            style="@style/ActivityListHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/session_clocking_header" />
+    </RelativeLayout>
+    -->
+
+    <Space
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:id="@+id/curr_shift_container_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="CURRENT SHIFT"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/clockbuttonslayout"
+        android:layout_width="fill_parent"
+        android:layout_height="128dip"
+        android:background="@drawable/clock_session_panel_background"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <com.cummins.mowo.widgets.ClockButtonWidget
+            android:id="@+id/clock_in_widget"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:paddingLeft="10dp"
+            android:paddingTop="18dp"
+            android:layout_weight="25"
+            custom:valueText="Clock In"
+            custom:valueTextSize="26sp"
+            android:background="@drawable/clock_button" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:id="@+id/clockbuttonslayout"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="50" >
+
+            <TextView
+                android:id="@+id/session_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="00h 00m"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/session_duration"
+                android:layout_centerHorizontal="true"
+                android:text="@string/timecard_status_bar_title_notstarted"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/session_indicator"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignBottom="@id/title"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/title"
+                android:background="@drawable/session_indicator"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@android:color/darker_gray" />
+
+        <com.cummins.mowo.widgets.ClockButtonWidget
+            android:id="@+id/clock_out_widget"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:paddingRight="10dp"
+            android:paddingTop="18dp"
+            android:layout_weight="25"
+            custom:valueText="Clock Out"
+            custom:valueTextSize="26sp"
+            android:background="@drawable/clock_button" />
+    </LinearLayout>
+
+    <!-- "@drawable/clockbutton_selector_holo_light" -->
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/activitysectionheader"
+        style="@style/SectionHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+
+        <TextView
+            android:id="@+id/header_text"
+            style="@style/ActivityListHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/activitiesheader" />
+    </RelativeLayout>
+    -->
+
+    <TextView
+        android:id="@+id/completed_activities_container_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="COMPLETED ACTIVITIES"
+        android:textSize="12sp" 
+        android:layout_marginTop="36dp"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/entries_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp" >
+
+        <include layout="@layout/container_empty" />
+
+        <FrameLayout
+            android:id="@+id/framelayout_activites_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" >
+
+            <ListView
+                android:id="@+id/list_for_entries"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants"
+                android:listSelector="@drawable/transparent_selector" />
+
+            <FrameLayout
+                android:id="@+id/entry_list_footer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/entry_header"
+                android:layout_gravity="bottom" >
+
+                <RelativeLayout
+                    android:id="@+id/current_activity_fragment_holder"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/add_entry_button_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_bar_actions_addnew" >
+
+        <TextView
+            android:id="@+id/AddActivityButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/ic_plus_black_32"
+            android:drawablePadding="10dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:text="@string/add_entry_button"
+            android:textColor="@android:color/darker_gray" />
+    </RelativeLayout>
+    -->
+
+</LinearLayout>

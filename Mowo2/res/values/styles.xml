@@ -1,0 +1,311 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="ListViewAppMowoTheme" parent="android:Widget.ListView">
+        <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+    </style>
+
+    <style name="ListViewAppMowoTheme.White" parent="android:Widget.ListView.White">
+        <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+    </style>
+
+    <style name="SpinnerItemAppMowoTheme" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Widget.TextView.ListSeparator" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="ActivityListHeader" parent="Widget.TextView.ListSeparator">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/emphasis</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SectionHeader" parent="ActivityListHeader">
+        <item name="android:listSeparatorTextViewStyle">@style/ActivityListHeader</item>
+        <item name="android:background">@drawable/list_section_divider_holo_light</item>
+    </style>
+
+    <style name="SectionHeaderActivityEdit" parent="SectionHeader">
+        <item name="android:listSeparatorTextViewStyle">@style/ActivityListHeader</item>
+        <item name="android:background">@drawable/list_section_divider_holo_light</item>
+        <item name="android:layout_marginLeft">6.0dip</item>
+        <item name="android:layout_marginRight">26.0dip</item>
+    </style>
+
+    <style name="SectionSubHeaderActivityEdit" parent="SectionHeader">
+        <item name="android:listSeparatorTextViewStyle">@style/ActivityListHeader</item>
+        <item name="android:background">@drawable/list_subsection_divider_holo_light</item>
+        <item name="android:layout_marginLeft">8.0dip</item>
+        <item name="android:layout_marginRight">16.0dip</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextAppearance_EditJob_Value" parent="@style/TextAppearance_EditJob">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">12.0dip</item>
+        <item name="android:layout_marginRight">12.0dip</item>
+    </style>
+
+    <style name="TextAppearance_EditJob">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">#ff333333</item>
+    </style>
+
+    <style name="TextAppearance_EditJob_LabelSmall" parent="@style/TextAppearance_EditJob_Small">
+        <item name="android:layout_marginTop">14.0dip</item>
+        <item name="android:layout_marginBottom">-12.0dip</item>
+        <item name="android:textColor">@android:color/holo_blue_light</item>
+        <item name="android:minHeight">24.0dip</item>
+    </style>
+
+    <style name="TextAppearance_EditJob_Small">
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ffaaaaaa</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextAppearance_EditJob_Spinner" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:textSize">18.0dip</item>
+    </style>
+
+    <style name="TextAppearance_Time_Period_Spinner" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:layout_marginLeft">16.0dip</item>
+        <item name="android:layout_marginRight">14.0dip</item>
+    </style>
+
+    <!-- swipe list view -->
+
+    <style name="ListBackContent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/swip_list_entries_height</item>
+        <item name="android:background">@drawable/background_item</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="ListFrontContent">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/swip_list_entries_height</item>
+        <item name="android:padding">@dimen/swip_list_padding_default</item>
+    </style>
+
+    <style name="ListImage">
+        <item name="android:layout_width">@dimen/size_list_image</item>
+        <item name="android:layout_height">@dimen/size_list_image</item>
+        <item name="android:scaleGravity">fill</item>
+        <item name="android:layout_marginRight">@dimen/swip_list_padding_default</item>
+    </style>
+
+    <style name="swip_list_activity_type_indicator">
+        <item name="android:layout_width">@dimen/size_list_image</item>
+        <item name="android:layout_height">@dimen/size_list_image</item>
+        <item name="android:scaleGravity">fill</item>
+        <item name="android:layout_marginRight">@dimen/swip_list_padding_default</item>
+    </style> <!-- <item name="android:background">@drawable/activity_indicator_work</item> -->
+
+    <style name="swipe_listview_time_btn_separator">
+        <item name="android:background">@drawable/activity_clock_btn_separator</item>
+    </style>
+
+    <style name="swipe_row_clocking">
+        <item name="android:textColor">@color/swip_row_clocking</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/swipe_list_entry_time_text_size</item>
+    </style>
+
+    <style name="swip_job_number">
+        <item name="android:textSize">@dimen/activity_job_number</item>
+        <item name="android:textColor">@color/swip_job_number</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="swip_duration">
+        <item name="android:textSize">@dimen/swipe_list_entry_time_text_size</item>
+        <item name="android:textColor">@color/swip_duration</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="swipe_row_activity_type">
+        <item name="android:textSize">@dimen/font_size_description</item>
+        <item name="android:textColor">@color/swip_row_activity_title</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="ListButtonAction">
+        <item name="android:layout_margin">0dp</item>
+    </style>
+
+    <style name="swip_gap">
+        <item name="android:layout_marginRight">@dimen/gap_layout_marginRight</item>
+        <item name="android:background">@drawable/activity_swipelist_gap</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!-- Settings -->
+
+    <style name="SettingTitle">
+        <item name="android:textColor">@color/text_title</item>
+        <item name="android:textSize">@dimen/font_size_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SettingContent">
+        <item name="android:paddingBottom">@dimen/swip_list_padding_default</item>
+        <item name="android:layout_marginLeft">@dimen/margin_setting</item>
+    </style>
+
+    <style name="SettingText">
+        <item name="android:textColor">@color/text_description</item>
+        <item name="android:textSize">@dimen/font_size_description</item>
+        <item name="android:layout_marginRight">@dimen/margin_default</item>
+    </style>
+
+    <style name="Line">
+        <item name="android:background">@color/line</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/line_default</item>
+    </style>
+
+    <style name="New">
+        <item name="android:textColor">@color/text_new_tag</item>
+        <item name="android:textSize">@dimen/font_size_new_tag</item>
+        <item name="android:text">@string/newTag</item>
+        <item name="android:background">@drawable/background_new_tag</item>
+        <item name="android:padding">@dimen/padding_new_tag</item>
+    </style>
+
+    <style name="swipe_row_activity_type">
+        <item name="android:textColor">@color/swiperow_activity_type</item>
+        <item name="android:textSize">@dimen/swipe_row_activity_type</item>
+    </style>
+
+    <!-- swipe list view end -->
+
+
+    <!-- timecard list start -->
+    <style name="timecard_list_child">
+        <item name="android:descendantFocusability">blocksDescendants</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/selector_timecard_list_item</item>
+        <item name="android:paddingRight">@dimen/timecard_list_child_default_padding</item>
+        <item name="android:paddingTop">@dimen/timecard_list_child_default_padding</item>
+        <item name="android:paddingBottom">@dimen/timecard_list_child_default_padding</item>
+        <item name="android:paddingLeft">@dimen/timecard_list_child_default_paddingLeft</item>
+    </style>
+
+    <style name="timecard_list_group">
+        <item name="android:background">@drawable/selector_timecard_list_group</item>
+    </style>
+
+    <!-- dialog activity set time -->
+
+    <style name="set_activity_time_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:background">@drawable/button_bar_actions_addnew</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:drawablePadding">20dp</item>
+    </style>
+
+    <style name="set_activity_time_ok_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/button_bar_actions_addnew</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="dialog_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/dialog_button</item>
+    </style>
+
+    <!-- slidgin dialog from bottom -->
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_in_dialog</item>
+        <item name="android:windowExitAnimation">@anim/anim_out_dialog</item>
+    </style>
+
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="@android:background">@android:color/white</item>
+        <item name="@android:textColor">@color/blue</item>
+        <item name="android:bottomBright">@color/grey</item>
+        <item name="android:bottomDark">@color/grey</item>
+        <item name="android:bottomMedium">@color/grey</item>
+        <item name="android:centerBright">@color/grey</item>
+        <item name="android:centerDark">@color/grey</item>
+        <item name="android:centerMedium">@color/grey</item>
+        <item name="android:fullBright">@color/blue</item>
+        <item name="android:fullDark">@color/blue</item>
+        <item name="android:topBright">@color/blue</item>
+        <item name="android:topDark">@color/blue</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+    </style>
+
+    <!-- entry screen -->
+    <style name="entry_screen_main_area">
+        <item name="android:background">@drawable/white_shadow_background</item>
+    </style>
+
+    <style name="entry_screen_prev_entry_area">
+        <item name="android:background">@drawable/entry_screen_next_entry_background</item>
+    </style>
+
+    <style name="entry_screen_next_entry_area">
+        <item name="android:background">@drawable/entry_screen_prev_entry_background</item>
+    </style>
+
+    <!-- form elements -->
+    <style name="formitem_labeled_textview_LL">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+            <!-- form inputs -->
+    <style name="formitem_labeled_input_textview_LL">
+        <item name="android:background">@drawable/form_edit_text</item>
+    </style>
+    
+    <style name="formitem_label_textview">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="formitem_edittext">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    <!-- themes cummins style -->
+    <style name="ThemeCumminsTurboDiesel" parent="Theme.AppCompat.Light">
+        <item name="android:windowBackground">@drawable/cummins_turbo_diesel</item>
+    </style>
+
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <GridView
+        android:id="@+id/button_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:columnWidth="120dp"
+        android:gravity="center"
+        android:horizontalSpacing="4dp"
+        android:numColumns="5"
+        android:scrollbars="horizontal"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="4dp" />
+
+    <Space
+        android:id="@+id/grid_separator"
+        android:layout_width="fill_parent"
+        android:layout_height="8dp"
+        android:layout_below="@id/button_grid" />
+
+    <LinearLayout
+        android:id="@+id/job_selection_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grid_separator"
+        android:layout_margin="8dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:weightSum="100" >
+
+        <ListView
+            android:id="@+id/button_job_option_grid"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
+
+        <ViewFlipper
+            android:id="@+id/job_selection_flippper"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="100"
+            android:background="@android:color/holo_blue_dark" >
+
+            <TextView
+                android:id="@+id/select_job_option_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/select_previous_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="8dp"
+                android:tag="PREVIOUS_JOB"
+                android:text="Last activity WO is "
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+
+            <ListView
+                android:id="@+id/list_jobs"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="#FFFFFF"
+                android:dividerHeight="1dp"
+                android:tag="JOB_LIST" />
+
+            <TextView
+                android:id="@+id/select_job_undefined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="8dp"
+                android:tag="JOB_UNDEFINED"
+                android:text="WO is undefiened "
+                android:textColor="@android:color/white"
+                android:textSize="28dp" />
+        </ViewFlipper>
+    </LinearLayout>
+
+    <Space
+        android:id="@+id/grid_separator2"
+        android:layout_width="fill_parent"
+        android:layout_height="8dp"
+        android:layout_below="@id/job_selection_container" />
+
+</merge>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MoWo</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_exit">Exit</string> 
+    <string name="hello_world">Hello world!</string>
+    <string name="clock">Clock</string>
+    <string name="menu_add_btn">New</string>
+    <string name="button_save">Start</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="label_sarttime">Start Time</string>
+    <string name="label_starttime">Start Time</string>
+    <string name="label_endtime">End Time</string>
+    <string name="label_activitytype">Activity Type</string>
+    <string name="label_enginenr">Engine Serial Number</string>
+    <string name="clockindialog_title">Clock New Activity</string>
+    <string name="clockindialog_text">This will set the start time of the new activity. </string>
+    
+    <string name="vibrate">Vibrate</string>
+    <string name="vibrate_summary">Vibrate summary</string>
+    <string name="click">click</string>
+    <string name="click_summary">click summary</string>    
+    <string name="volume">volume</string>
+    <string name="volume_summary">volume summary</string>      
+    <string name="voice">voice</string>
+    <string name="voice_summary">voice summary</string>  
+    <string name="voice_interval">voice interval</string>
+    <string name="voice_interval_summary">voice interval summary</string>            
+    
+    <string name="clock_button_font">fonts/Roboto-Light.ttf</string>
+    <string name="swipe_row_activity_job_id_font">fonts/airbrne2.ttf</string>
+    <string name="swipe_row_activity_type_font">fonts/Dosis-Book.ttf</string>
+    <string name="timecardlistheading_font">fonts/Roboto-Light.ttf</string>
+    
+    <string-array name="activity_types_array">
+        <item>000-Undefined-N</item>
+        <item>001-Chargeable Labor-Y</item>
+        <item>901-Internal Administration-N</item>
+        <item>902-Holiday-N</item>
+        <item>903-Sickness-N</item>
+    </string-array>
+    
+    <string-array name="time_period_array">
+        <item>1-Current Week</item>
+        <item>2-Previous Week</item>
+        <item>3-Range of Dates</item>
+    </string-array>
+
+    <string name="workordernr">Work Order</string>
+    <string name="label_enginemodel">Engine Model</string>
+    <string name="origin">Origin</string>
+    <string name="destination">Destination</string>
+    <string name="refresh">Refresh</string>
+    <string name="activitiesheader">Entries</string>
+    <string name="add_entry_button">Add Entry</string>
+    <string name="session_clocking_header">Working Time</string>
+    <string name="spinner_title">Activity Type</string>
+    <string name="activity_type">ENTRY TYPE</string>
+    <string name="allocation_label">ALLOCATION</string>
+    <string name="job_number">Job Number</string>
+    <string name="newactivityheader">Start New Activity</string>
+    <string name="activitydetailsheader">Activity Details</string>
+    <string name="clockbtnactionlbl_clockin">Clock In</string>
+    <string name="clockbtnactionlbl_clockout">Clock Out</string>
+    <string name="clockbtnactionlbl_clockin_indicator">IN</string>
+    <string name="clockbtnactionlbl_clockout_indicator">OUT</string>
+    <string name="clockbtn_already_clocked_in">You are already clocked in</string>
+    <string name="clockbtn_already_clocked_out">You are already clocked out</string>   
+    <string name="clockbtn_not_started_yet">Clock in first</string>   
+    <string name="timecard_deleted">Timecard deleted</string>
+    
+    <string name="activity_end_running_activities">Last activity is currently active. Please end it before starting new activitiy</string>
+    
+    <string name="activity_already_ended">Activity already ended</string> 
+    
+    <string name="speach_clocked_in">You clocked in at"</string>
+    <string name="speach_clocked_out">You clocked out at"</string>
+    
+    <string name="activity_manual_switch_text">Auto-clock</string>
+    
+    <string name="empty_container_line_one">CLOCK IN TO START YOUR SHIFT</string>
+    <string name="empty_container_line_two">HAVE A GREAT DAY !</string>
+    <string name="empty_container_hint"> </string> <!-- \"Auto-clock\" will end previous activity when next is added -->
+    
+    <string name="timecard_status_bar_title_notstarted">DURATION</string>
+    <string name="timecard_status_bar_title_started">SESSION STARTED</string>
+    <string name="timecard_status_bar_title_ended">SESSION ENDED</string> 
+    <string name="timecard_session_control_button">click to start new session</string>
+    
+    <string name="timecard_add_activity_action_speach">New activity created</string> 
+   
+    <!-- Swipe List View -->
+    
+    <string name="appName">SwipeListView Demo</string>
+    <string name="open">Open</string>
+    <string name="googlePlay">Google Play</string>
+    <string name="uninstall">Uninstall</string>
+
+    <string name="cantOpen">Can\'t open this application</string>
+    <string name="settings">Settings</string>
+    <string name="mode">Swipe Mode</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="both">Both</string>
+    <string name="leftAction">Left Action</string>
+    <string name="reveal">Reveal</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="choice">Choice</string>
+    <string name="rightAction">Right Action</string>
+    <string name="rightOffset">Right Offset (%1$s dp)</string>
+    <string name="leftOffset">Left Offset (%1$s dp)</string>
+    <string name="dp">dp</string>
+    <string name="animationTime">Animation Time (Default: 0)</string>
+    <string name="milliseconds">Milliseconds</string>
+    <string name="openOnLongPress">Open On Long Press</string>
+
+    <string name="about">About</string>
+    <string name="aboutMessage">This is just a simple demo for the Open Source SwipeListView Android Library by 47 Degrees. Find all source, documentation and packaged downloads at GitHub. Cheers!</string>
+    <string name="ok">OK</string>
+
+    <string name="visit47">Visit 47deg</string>
+    <string name="goToGitHub">Go to GitHub</string>
+
+    <string name="dontShow">Don\'t show this message again</string>
+    <string name="others">Others</string>
+
+    <string name="loading">Loading</string>
+
+    <string name="newTag">New!</string>
+    <string name="discard">Discard</string>
+    
+    <!-- End swipe list view -->
+    <string name="dialog_date_time_setter_mode">Use real time mode</string>
+    
+    <!-- Clock control -->
+    <string name="clock_control_dialog_gps_loc_title">Punch GPS Location</string>
+    <string name="clock_control_instruction_to_swipe">Swipe virtual badge to clock</string>
+    <string name="clock_control_save_button">Save</string>
+    <string name="clock_control_dialog_punch_time">Punch time</string>
+    
+    <!-- dialog activity set time -->
+    <string name="btn_activity_set_time_manual">Set time manually</string>
+    <string name="btn_activity_set_link_to_prev">Link to previous</string>
+    <string name="tab_pick_date">Date</string>
+    <string name="tab_pick_time">Time</string>
+    <string name="btn_activity_set_time_manual_ok">Set</string>
+    
+    <!-- dialog start new activity  -->
+    <string name="header_select_job">SELECT JOB</string>
+    
+    <!-- current activity -->
+    <string name="noboringactionbar_title">Beautiful picture</string>
+    <string name="new_activity_question">What is your next activity ?</string>
+    <string name="continue_activity_question">Start next activity on this job?</string>
+    <string name="next_activity_on_this_job_label">NEXT ON THIS JOB</string>
+</resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/front"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="0dp"
+    android:background="@drawable/activity_entry_list_item"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:tag="front" >
+
+    <ImageView
+        android:id="@+id/list_image"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp" />
+
+    <RelativeLayout
+        android:id="@+id/row_continer2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="8dp"
+        android:layout_toRightOf="@id/list_image" >
+
+        <TextView
+            android:id="@+id/activity_clock_out_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="18dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="00:00 am" />
+        
+                <TextView
+            android:id="@+id/dash_between_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:gravity="center"
+            android:layout_toLeftOf="@id/activity_clock_out_time"
+            android:layout_alignBottom="@id/activity_clock_out_time"
+            android:textSize="18dp"
+            android:text="-"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/activity_clock_in_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/dash_between_time"
+            android:layout_alignBottom="@id/activity_clock_out_time"
+            android:textSize="18dp"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/activity_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/activity_clock_out_time"
+            android:layout_below="@id/activity_clock_out_time"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <RelativeLayout
+            android:id="@+id/container_for_activity_type"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/activity_clock_in_time"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="left|center_vertical" >
+
+            <TextView
+                android:id="@+id/swiperow_activity_job_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:textSize="18dp"
+                android:clickable="false"
+                android:focusable="false"
+                android:hint="Not chargable" />
+
+            <TextView
+                android:id="@+id/swiperow_activity_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/swiperow_activity_job_id"
+                android:layout_below="@id/swiperow_activity_job_id"
+                android:layout_marginTop="8dp"
+                android:textSize="18dp"
+                android:textColor="@android:color/secondary_text_dark"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                android:id="@+id/swiperow_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/swiperow_activity_type"
+                android:layout_below="@id/swiperow_activity_type"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/swiperow_activity_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="1"
+        android:text="Gap 01:30"
+        android:visibility="invisible" />
+
+</RelativeLayout>

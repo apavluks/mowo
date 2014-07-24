@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_window">#FFE5E5E5</color>
+    <color name="emphasis">#31b6e7</color>
+    <color name="textEdit">#ff333333</color>
+    <color name="empty_container_text">#ff808080</color>
+    <color name="activity_manual_switch_text">#ff808080</color>
+    <color name="timcard_list_entry_text">#ff4d4d4d</color>
+    <color name="tc_titlebar_not_started">#FFFFFF</color>
+    <color name="tc_titlebar_started">#FFFFFF</color>
+    <color name="tc_titlebar_ended">#FFFFFF</color>
+
+    <!-- swipe list entries -->
+    <color name="background_app">#dedede</color>
+    <color name="background_list_back">#e3e3e3</color>
+    <color name="background_list_front">#ffffff</color>
+    <color name="text_title">#444444</color>
+    <color name="text_description">#7e7e7e</color>
+    <color name="line">#ffbcbcbc</color>
+    <color name="background_new_tag">#ff0000</color>
+    <color name="text_new_tag">#ffffff</color>
+    <color name="swip_row_activity_title">#B1BEB9</color>
+    <color name="swip_row_clocking">#76789A</color>
+    <color name="swip_job_number">#76789A</color>
+    <color name="swip_duration">#76789A</color>
+    <color name="swip_activte_activity_time">#c6c6c6</color>
+    
+    <color name="swiperow_activity_type">#B1BEB9</color>
+
+    <!-- timecard list group -->
+    <color name="timecard_list_group">#E2EBF4</color>
+
+    <!-- badge swiper -->
+    <color name="default_screen_bg">#20324a</color>
+    <color name="rounded_container_bg">#80000000</color>
+    <color name="rounded_container_border">#3b3f44</color>
+    <color name="light_gray_header_color">#646663</color>
+    
+    <color name="grey">#c6c6c6</color>
+    <color name="grey_light">#ececec</color>
+      <color name="blue">#646663</color>
+      <color name="red">#FE4265</color>
+      <color name="green">#7DD5AD</color>
+      <color name="green_dark">#71CBA3</color>
+ 
+</resources>

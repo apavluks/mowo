@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="2dip"
+        android:background="@drawable/job_list_normal"
+        android:layout_weight="1.0"/>
+   <!--     android:clickable="true"
+        android:dividerHeight="1dip"
+        android:focusable="true"
+        android:scrollingCache="false" 
+        android:focusableInTouchMode="true"
+        
+        style="@style/ListBackground"
+        android:paddingTop="2dip" 
+        android:paddingBottom="3dip"
+        
+        
+    --> 
+
+    

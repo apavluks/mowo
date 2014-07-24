@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activityfragmentlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="400dp"
+    android:minWidth="300dp"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CONTINUE JOB"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/dialog_content_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp" >
+
+        <ImageView
+            android:id="@+id/checkbox_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_round_ok_green_48" />
+
+        <TextView
+            android:id="@+id/completed_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/checkbox_done"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/checkbox_done"
+            android:drawablePadding="16dp"
+            android:text="Unknown"
+            android:textSize="18sp" />
+        
+                <TextView
+            android:id="@+id/completed_activity_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/checkbox_done"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/checkbox_done"
+            android:drawablePadding="16dp"
+            android:text="CURRENT"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lineconnectinactivites"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:background="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/next_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="SELECT NEXT"
+        android:textSize="18sp" />
+
+    <GridView
+        android:id="@+id/button_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:columnWidth="120dp"
+        android:gravity="center"
+        android:horizontalSpacing="4dp"
+        android:numColumns="5"
+        android:scrollbars="horizontal"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="4dp" />
+
+</LinearLayout>

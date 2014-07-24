@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_time_setter_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="40dp" >
+
+    <Switch
+        android:id="@+id/manualTimeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:switchMinWidth="50sp"
+        android:switchPadding="30sp"
+        android:text="@string/activity_manual_switch_text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/activity_manual_switch_text"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/time_setter_latitute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/time_setter_longtitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/time_setter_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <DatePicker
+        android:id="@+id/time_setter_date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TimePicker
+        android:id="@+id/time_setter_time_picker"
+        android:paddingTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <DigitalClock
+        android:id="@+id/digitalclock"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="40dp"
+        android:textSize="48sp" />
+
+    <SeekBar
+        android:id="@+id/time_setter_badge_control"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/progressbar"
+        android:secondaryProgress="0"
+        android:thumb="@drawable/ic_badge" />
+
+    <TextView
+        android:id="@+id/clock_control_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clock_control_instruction_to_swipe" />
+
+</LinearLayout>

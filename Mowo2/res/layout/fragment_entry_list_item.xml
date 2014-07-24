@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_entry_container_tablelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_selector_holo_light"
+    android:descendantFocusability="blocksDescendants">
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:orientation="horizontal" 
+            android:gravity="center_vertical"
+            android:layout_marginLeft="8.0dip"
+			android:minHeight="?android:attr/listPreferredItemHeight">
+
+            <TextView
+                android:id="@+id/actual_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="08:00 am"
+                android:textColor="@color/timcard_list_entry_text"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textIsSelectable="false" />
+ 
+             <TextView
+                android:id="@+id/actual_time_separator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/actual_start_time"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text=" - "
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textColor="@color/timcard_list_entry_text"
+                android:textIsSelectable="false" />
+ 
+            <TextView
+                android:id="@+id/actual_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/actual_time_separator"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="17:00 pm"
+                android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                android:textColor="@color/timcard_list_entry_text"
+                android:textIsSelectable="false" />
+                 
+               <TextView
+                   android:id="@+id/duration_textview"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="16.0dip"
+                   android:layout_toRightOf="@id/actual_end_time"
+                   android:background="@android:color/transparent"
+                   android:focusable="false"
+                   android:focusableInTouchMode="false"
+                   android:gravity="center_vertical"
+                   android:text="2.hr"
+                   android:textAppearance="?android:attr/textAppearanceListItemSmall"
+                   android:textColor="@color/timcard_list_entry_text"
+                   android:textIsSelectable="false" />
+
+        </RelativeLayout>
+
+
+               
+        <TextView
+            android:id="@+id/activity_type_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="40"
+            android:background="@android:color/transparent"
+            android:text="Carchable Work"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@color/timcard_list_entry_text"
+            android:textIsSelectable="false" 
+            android:gravity="left"/>
+        
+
+        <TextView
+            android:id="@+id/job_number_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:text="00000000"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@color/timcard_list_entry_text"
+            android:textIsSelectable="false" 
+            android:gravity="left"/>
+        
+
+    </TableRow>
+
+</TableLayout>

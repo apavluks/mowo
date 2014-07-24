@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ViewSwitcher1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- layout for auto punch -->
+
+    <LinearLayout
+        android:id="@+id/dialog_time_setter_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="40dp" >
+
+        <TextView
+            android:id="@+id/clock_control_location_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/clock_control_dialog_gps_loc_title"
+            android:textAppearance="@android:style/TextAppearance.Holo" />
+
+        <TextView
+            android:id="@+id/gps_latitute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/gps_longtitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" />
+
+        <TextView
+            android:id="@+id/gps_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" />
+
+        <DigitalClock
+            android:id="@+id/digitalclock"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="40dp"
+            android:textSize="48sp" />
+
+        <SeekBar
+            android:id="@+id/time_setter_badge_control"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progressbar"
+            android:secondaryProgress="0"
+            android:thumb="@drawable/badge_with_image" />
+
+        <TextView
+            android:id="@+id/time_setter_swipe_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clock_control_instruction_to_swipe" />
+    </LinearLayout>
+
+    <!-- layout for editing punch -->
+
+    <LinearLayout
+        android:id="@+id/dialog_time_setter_container1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="40dp" >
+
+        <TextView
+            android:id="@+id/clock_control_location_header1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/clock_control_dialog_gps_loc_title"
+            android:textAppearance="@android:style/TextAppearance.Holo" />
+
+        <TextView
+            android:id="@+id/gps_latitute1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/gps_longtitude1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" />
+
+        <TextView
+            android:id="@+id/gps_address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" />
+
+        <TextView
+            android:id="@+id/clock_control_location_header1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/clock_control_dialog_punch_time"
+            android:textAppearance="@android:style/TextAppearance.Holo" />
+
+        <TextView
+            android:id="@+id/clock_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textSize="28dp" />
+
+        <Space
+            android:id="@+id/clock_time"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/view_map_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/clock_session_time_btn"
+            android:paddingTop="5dp"
+            android:text="View Map" />
+    </LinearLayout>
+
+</ViewSwitcher>

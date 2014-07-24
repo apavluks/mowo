@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activityfragmentlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="400dp"
+    android:minWidth="300dp"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <RelativeLayout
+        android:id="@+id/dialog_content_holder"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dip"
+        android:layout_weight="1"
+        android:padding="15dp" >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="ACTIVITY SELECTION"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dialog_activity_type_section_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_title"
+            android:layout_marginTop="16dp"
+            android:text="SELECT ACTIVITY"
+            android:textColor="@android:color/secondary_text_dark"
+            android:textSize="14sp" />
+
+        <GridView
+            android:id="@+id/button_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_activity_type_section_label"
+            android:layout_centerHorizontal="true"
+            android:columnWidth="120dp"
+            android:gravity="center"
+            android:horizontalSpacing="4dp"
+            android:numColumns="5"
+            android:scrollbars="horizontal"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="4dp" />
+
+        <TextView
+            android:id="@+id/dialog_job_section_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_grid"
+            android:layout_marginTop="16dp"
+            android:text="SELECT JOB"
+            android:textColor="@android:color/secondary_text_dark"
+            android:textSize="14sp" />
+
+        <ListView
+            android:id="@+id/job_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_job_section_label"
+            android:layout_marginTop="8dp"
+            android:listSelector="@drawable/dialog_list_selector" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/start_activity_button"
+        style="@style/dialog_button"
+        android:text="SET" />
+
+</LinearLayout>

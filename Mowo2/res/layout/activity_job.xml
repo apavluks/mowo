@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.cummins.mowo"
+    android:id="@+id/activity_job_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp" >
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <!-- style="@style/entry_screen_main_area" android:layout_above="@id/buttons" -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp" >
+
+            <RelativeLayout
+                android:id="@+id/job_number_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/space_between_entry_fields" >
+
+                <TextView
+                    android:id="@+id/label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="JOB NUMBER" />
+
+                <EditText
+                    android:id="@+id/job_number_edit_text"
+                    style="@style/formitem_labeled_input_textview_LL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/label1"
+                    android:layout_below="@id/label1"
+                    android:layout_marginTop="4dp"
+                    android:minHeight="48.0dip"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/job_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/job_number_container"
+                android:layout_below="@id/job_number_container"
+                android:layout_marginTop="@dimen/space_between_entry_fields" >
+
+                <TextView
+                    android:id="@+id/label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="COMMENT" />
+
+                <EditText
+                    android:id="@+id/job_comment_edit_text"
+                    style="@style/formitem_labeled_input_textview_LL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/label1"
+                    android:layout_below="@id/label1"
+                    android:layout_marginTop="4dp"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+                    android:minHeight="48.0dip"
+                    android:minLines="1"
+                    android:scrollbars="vertical"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

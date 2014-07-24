@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ViewSwitcher1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- layout for auto punch -->
+
+    <LinearLayout
+        android:id="@+id/set_time_first_view"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <TextView
+            android:id="@+id/set_time_option_manual"
+            style="@style/set_activity_time_button"
+            android:layout_marginTop="80dp"
+            android:drawableLeft="@drawable/ic_change_clock_48"
+            android:text="@string/btn_activity_set_time_manual" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:id="@+id/set_time_option_linktoprev"
+            style="@style/set_activity_time_button"
+            android:background="@drawable/button_bar_actions_addnew"
+            android:drawableLeft="@drawable/ic_link_48"
+            android:gravity="center_vertical"
+            android:text="@string/btn_activity_set_link_to_prev" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dialog_time_setter_container"
+        android:layout_width="fill_parent"
+        android:background="@android:color/white"
+        android:layout_height="600dp" >
+
+        <TabHost
+            android:id="@android:id/tabhost"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:tag="tab0"
+                        android:text="Date" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:tag="tab1"
+                        android:text="Time" />
+                </TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <DatePicker
+                        android:id="@+id/datePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal"
+                         />
+
+                    <TimePicker
+                        android:id="@+id/timePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center_horizontal" />
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+        <TextView
+            android:id="@+id/set_time_button"
+            style="@style/set_activity_time_ok_button"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="@string/btn_activity_set_time_manual_ok" />
+
+        <TextView
+            android:id="@+id/set_time_before"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/set_time_button"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/set_time_after"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/set_time_button"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/set_time_before" />
+    </RelativeLayout>
+
+    <!-- layout for editing punch -->
+
+    <LinearLayout
+        android:id="@+id/dialog_time_setter_container1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="40dp" >
+
+        <TextView
+            android:id="@+id/clock_control_location_header1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/clock_control_dialog_gps_loc_title"
+            android:textAppearance="@android:style/TextAppearance.Holo" />
+
+        <TextView
+            android:id="@+id/gps_latitute1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/gps_longtitude1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" />
+
+        <TextView
+            android:id="@+id/gps_address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" />
+
+        <TextView
+            android:id="@+id/clock_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp" />
+    </LinearLayout>
+
+</ViewFlipper>

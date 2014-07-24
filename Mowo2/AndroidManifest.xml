@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cummins.mowo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <supports-screens android:requiresSmallestWidthDp="600" />
+
+    <!-- The Google Maps Android API uses OpenGL ES version 2 to render the map. If OpenGL ES version 2 is not installed, your map will not appear. We recommend that you 
+         add the following <uses-feature> element as a child of the <manifest> element in AndroidManifest.xml: -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+    
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />                      <!-- Allows the API to check the connection status in order to determine whether data can be downloaded. -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>    <!-- Allows the API to access Google web-based services. -->
+    <uses-permission android:name="android.permission.INTERNET"/>                                   <!-- Used by the API to download map tiles from Google Maps servers. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>                     <!-- Allows the API to cache map tile data in the device's external storage area. -->
+    
+    <!-- The following permissions are recommended, but can be ignored if your application does 
+    not access the user's current location, either programmatically, or by enabling the My Location layer. -->
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>                     <!-- Allows the API to use WiFi or mobile cell data (or both) to determine the device's location. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>                       <!-- Allows the API to use the Global Positioning System (GPS) to determine the device's location to within a very small area. -->
+
+    <permission android:name="com.cummins.mowo.permission.MAPS_RECEIVE" 
+                android:protectionLevel="signature"/> 
+    <uses-permission android:name="com.cummins.mowo.permission.MAPS_RECEIVE"/>
+  
+    <application
+        android:name="com.cummins.mowo.model.GlobalState"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light" >
+        
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAi3B5FjdfRswzQssJQU2GupGum2UZsZDM" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- android:uiOptions="splitActionBarWhenNarrow" -->
+        <activity
+            android:name="com.cummins.mowo.activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cummins.mowo.activity.timecardentry.TimecardEntryActivity"
+            android:label="Activity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.cummins.mowo.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cummins.mowo.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cummins.mowo.activity.job.JobActivity"
+            android:label="Job"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.cummins.mowo.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cummins.mowo.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cummins.mowo.activity.ClockActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.cummins.mowo.activity.swipelistview.SwipeListViewExampleActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.cummins.mowo.activity.swipelistview.SettingsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.PrefsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cummins.mowo.activity.ShowGPSActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

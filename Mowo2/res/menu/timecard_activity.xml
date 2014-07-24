@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mowoapp="http://schemas.android.com/apk/res-auto">
+
+ <!--   <item
+        android:id="@+id/timecardentry_cancel"
+        android:icon="@drawable/ic_action_cancel"
+        android:title="Cancel"
+        android:orderInCategory="100"
+        mowoapp:showAsAction="always"/>
+   -->
+    
+    <item
+        android:id="@+id/timecardentry_save"
+        android:icon="@drawable/ic_action_accept"
+        android:title="Save"
+        android:orderInCategory="200"
+        mowoapp:showAsAction="always"/>
+
+</menu>

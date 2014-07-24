@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+               <TextView
+                android:id="@+id/JobControlsFragment_RateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="?android:listPreferredItemPaddingRight"
+                android:text="$72.12/hr"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                android:textColor="#ff669900" />
+
+</LinearLayout>

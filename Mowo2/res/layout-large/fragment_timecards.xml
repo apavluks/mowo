@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.cummins.mowo"
+    android:id="@+id/fragment_timecards_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <RelativeLayout
+        android:id="@+id/timesheets_subtab_controls"
+        android:layout_marginTop="10dip"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10" >
+
+        <TextView
+            android:id="@+id/period_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="4.0dip"
+            android:textSize="28dip"
+            android:text="CURRENT PERIOD"
+            android:layout_centerInParent="true"/>
+
+        <com.cummins.mowo.widgets.PeriodControlWidget
+            android:id="@+id/previous_period_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/period_title"
+            android:background="@drawable/clockbutton_selector_holo_light"
+            custom:valueText="Previous"
+            custom:valueTextSize="18sp" />
+
+        <com.cummins.mowo.widgets.PeriodControlWidget
+            android:id="@+id/next_period_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/period_title"
+            android:background="@drawable/clockbutton_selector_holo_light"
+            custom:valueText="Next"
+            custom:valueTextSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/period_list_fragments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/list_anchor"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <!--
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:orientation="vertical" 
+            android:background="@drawable/timecard_list_header_border">
+
+           <Spinner
+                android:id="@+id/time_period_spinner"
+                style="@style/TextAppearance_Time_Period_Spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6.0dip"
+                android:drawSelectorOnTop="true"
+                android:minWidth="150.0dip"
+                android:paddingTop="16.0dip"
+                android:prompt="@string/spinner_title" /> 
+  
+        </LinearLayout>
+            -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/list_item_anchor"
+            android:layout_width="0dp"
+            android:background="@drawable/timecard_list_fragment"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="2">
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
